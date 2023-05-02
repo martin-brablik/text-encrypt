@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.text.Text?>
+
+<ScrollPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="cz.upol.inf.jj2.martinbrablik.javafx2.ExplanationWindowController">
+	<Text fx:id="explanation" text="" />
+</ScrollPane>
+

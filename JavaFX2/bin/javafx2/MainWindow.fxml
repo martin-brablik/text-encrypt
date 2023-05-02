@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.text.Text?>
+<?import javafx.geometry.Insets?>
+
+
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="cz.upol.inf.jj2.martinbrablik.javafx2.MainWindowController">
+	<top>
+		<MenuBar fx:id="menuBar">
+			<BorderPane.margin>
+				<Insets top="0.0" right="0.0" bottom="10.0" left="0.0" />
+			</BorderPane.margin>
+			<Menu fx:id="menuFile" text="Soubor">
+				<MenuItem fx:id="itemCypher" text="Zašifrovat" onAction="#actionCypher" />
+				<MenuItem fx:id="itemDecypher" text="Odšifrovat" onAction="#actionDecypher" />
+				<SeparatorMenuItem />
+				<MenuItem fx:id="itemExit" text="Ukončit" onAction="#actionExit" />
+			</Menu>
+		</MenuBar>
+	</top>
+	<left>
+		<VBox fx:id="textsPane" spacing="5.0">
+			<BorderPane.margin>
+				<Insets top="0.0" right="0.0" bottom="10.0" left="10.0" />
+			</BorderPane.margin>
+			<Text fx:id="lbDecypher" text="Normální text:" />
+			<TextArea fx:id="decypherIn" maxWidth="4294967296.0" />
+			<Text fx:id="lbCypher" text="Zašifrovaný text:" />
+			<TextArea fx:id="cypherIn" maxWidth="4294967296.0" />
+		</VBox>
+	</left>
+	<right>
+		<VBox fx:id="controlsPane" spacing="5.0">
+			<BorderPane.margin>
+				<Insets top="0.0" right="10.0" bottom="0.0" left="00.0" />
+			</BorderPane.margin>
+			<Text fx:id="lbKey" text="Klíč:" />
+			 <TextField fx:id="keyIn" /><!-- Set Text Formatter -->
+			 <Button fx:id="btnCypher" text="Zašifrovat" onAction="#actionCypher" maxWidth="4294967296.0" />
+			 <Button fx:id="btnDeCypher" text="Odšifrovat" onAction="#actionDecypher" maxWidth="4294967296.0" />
+			 <Button fx:id="btnExplain" text="Vysvětlit" onAction="#actionExplain" maxWidth="4294967296.0" />
+		</VBox>
+	</right>
+</BorderPane>
+
